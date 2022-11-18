@@ -61,7 +61,7 @@ JSONが文字列組み立て式なのでJacksonか何かでちゃんとやって
 サーバーレスアプリケーションをローカルで実行
 ```bash
 sam build
-sam local start-api
+sam local start-api &
 curl http://127.0.0.1:3000/hello
 ```
 
@@ -69,7 +69,19 @@ curl http://127.0.0.1:3000/hello
 
 テスト終わったら `sam delete --no-prompts` でAWS上から消す。
 
+## TODO
 
+sam initで出てくる以下のコマンドあんまり使ったことない
+```
+  Commands you can use next
+    =========================
+    [*] Create pipeline: cd java-hello1 && sam pipeline init --bootstrap
+    [*] Validate SAM template: cd java-hello1 && sam validate
+    [*] Test Function in the Cloud: cd java-hello1 && sam sync --stack-name {stack-name} --watch
+```
+ちゃんと試す。
+
+<hr>
 (以下sam intそのまま)
 
 # java-hello1
